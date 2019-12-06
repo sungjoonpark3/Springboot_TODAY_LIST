@@ -24,6 +24,9 @@ public class TodolistVO {
 	private Long seq;
 	
 	private String content;
+	
+	//중요도
+	private String importance; 
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(updatable=false)

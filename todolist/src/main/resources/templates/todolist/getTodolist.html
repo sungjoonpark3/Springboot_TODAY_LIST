@@ -23,6 +23,7 @@
 			<tr align="center">
 				<th>번호</th>
 				<th>할일</th>
+				<th>중요도</th>
 				<th>등록일자</th>
 				<th>버튼</th>
 			</tr>
@@ -30,7 +31,7 @@
 			<tr th:each="todolistVO,state : ${todolist}">
 				<td th:text="${state.count}" th:align="center">
 				<td th:text="${todolistVO.content}">
-				
+				<td th:text="${todolistVO.importance}" th:align="center">
 				</td>
 				<td th:text="${#dates.format(todolistVO.createDate,'yyyy-MM-dd')}" th:align="center">
 				
