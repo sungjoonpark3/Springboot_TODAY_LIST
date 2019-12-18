@@ -24,6 +24,7 @@ public class TodolistServiceImpl implements TodolistService {
 	public void updateTodolist(TodolistVO todolistVO) {
 		TodolistVO findTodolistVO =todolistRepo.findById(todolistVO.getSeq()).get();
 		findTodolistVO.setContent(todolistVO.getContent());
+		findTodolistVO.setImportance(todolistVO.getImportance());
 		todolistRepo.save(findTodolistVO);
 	}
 
